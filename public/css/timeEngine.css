@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+.tween-opt
+{
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
 html, body
 {
 	width: 100%;
@@ -45,35 +51,31 @@ html, body
 .tween-land
 {
 	transform-origin: 50% 100%;
-	animation: tweenLandFrames 4s linear infinite;
+	animation: tweenLandFrames 4s ease-in-out infinite;
 }
 
 @keyframes tweenLandFrames
 {
-/*	0%		{transform: translateY(0px);}
-	50%		{transform: translateY(20px);}
-	100%	{transform: translateY(0px);}*/
-
-	0%		{transform: scaleY(1);}
-	50%		{transform: scaleY(1.01);}
-	100%	{transform: scaleY(1);}
+	0%		{transform: translateY(0px);}
+	50%		{transform: translateY(4px);}
+	100%	{transform: translateY(0px);}
 }
 
 .land0 .land-content
 {
-	animation-duration: 100ms;
+	animation-duration: 1200ms;
 	background-image: url(../img/grassyHill0.png);
 }
 
 .land1 .land-content
 {
-	animation-duration: 150ms;
+	animation-duration: 1220ms;
 	background-image: url(../img/grassyHill1.png);	
 }
 
 .land2 .land-content
 {
-	animation-duration: 200ms;
+	animation-duration: 1240ms;
 	background-image: url(../img/grassyHill2.png);	
 }
 
@@ -120,6 +122,20 @@ html, body
 {
 	-webkit-transition: 2s ease-in-out;
 	transition: 2s ease-in-out;
+}
+
+.sky .sky-layer
+{
+	width: inherit;
+	height: inherit;
+	position: inherit;
+
+	transform-origin: 50% 100%;
+
+	background-image: url(../img/sky.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: cover;
 }
 
 
