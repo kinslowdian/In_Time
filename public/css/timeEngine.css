@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+html, body
+{
+	width: 100%;
+	height: 100%;
+}
+
+#display-wrapper
+{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.display-content
+{
+	width: inherit;
+	height: inherit;
+	position: inherit;
+}
+
+.fill
+{
+	width: 100%;
+	height: 100%;
+/*	max-width: 1920px;
+	max-height: 1080px;*/
+	left: 0; right: 0; top: 0; bottom: 0;
+
+	position: absolute;
+}
+
+.land .land-content
+{
+	width: inherit;
+	height: inherit;
+
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.tween-land
+{
+	transform-origin: 50% 100%;
+	animation: tweenLandFrames 4s linear infinite;
+}
+
+@keyframes tweenLandFrames
+{
+/*	0%		{transform: translateY(0px);}
+	50%		{transform: translateY(20px);}
+	100%	{transform: translateY(0px);}*/
+
+	0%		{transform: scaleY(1);}
+	50%		{transform: scaleY(1.01);}
+	100%	{transform: scaleY(1);}
+}
+
+.land0 .land-content
+{
+	animation-duration: 100ms;
+	background-image: url(../img/grassyHill0.png);
+}
+
+.land1 .land-content
+{
+	animation-duration: 150ms;
+	background-image: url(../img/grassyHill1.png);	
+}
+
+.land2 .land-content
+{
+	animation-duration: 200ms;
+	background-image: url(../img/grassyHill2.png);	
+}
+
+.light-main
+{
+	background: orange;
+	opacity: 0.55;
+	-webkit-background-blend-mode: multiply;
+	background-blend-mode: multiply;
+}
+
+
+.fx-test
+{
+	-webkit-filter: grayscale(70%) brightness(60%) contrast(250%);
+	filter: grayscale(70%) brightness(60%) contrast(250%);
+}
+
+.fx-morning
+{
+	-webkit-filter: grayscale(50%) brightness(100%) contrast(200%);
+	filter: grayscale(50%) brightness(100%) contrast(200%);
+}
+
+.fx-noon
+{
+	-webkit-filter: grayscale(0%) brightness(120%) contrast(150%);
+	filter: grayscale(0%) brightness(120%) contrast(150%);
+}
+
+.fx-evening
+{
+	-webkit-filter: grayscale(40%) brightness(60%) contrast(150%);
+	filter: grayscale(40%) brightness(60%) contrast(150%);
+}
+
+.fx-night
+{
+	-webkit-filter: grayscale(70%) brightness(60%) contrast(250%);
+	filter: grayscale(70%) brightness(60%) contrast(250%);
+}
+
+.tween-fx
+{
+	-webkit-transition: 2s ease-in-out;
+	transition: 2s ease-in-out;
+}
+
+
+
